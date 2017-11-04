@@ -1,16 +1,16 @@
 # SATSolver
 
-Projekt z naslovom SATsolver je namenjen predmetu logika v računalništvu na fakulteti za matematiko in fiziko. Avtorji projekta so Sara Brezec, Julita Gabrijelčič in Nika Krušec.
+Projekt z naslovom SATsolver je namenjen predmetu Logika v računalništvu, ki se izvaja na fakulteti za matematiko in fiziko. Avtorji so Sara Brezec, Julita Gabrijelčič in Nika Krušec.
 
-Projekt je napisan v programskem jeziku python.
+Projekt je zapisan v programskem jeziku Python.
 
 # Delovanje programa:
 
-Glavna datoteka se nahaja pod imenom SATsolver.py. Datoteko zaženemo z dvema argumentoma, ki sta imeni vhodne ter izhodne datoteke. Datoteke,  so napisane v formatu Dimacs.
+Glavna datoteka se nahaja pod imenom SATsolver.py. Zaženemo jo z dvema argumentoma, to sta imeni vhodne in izhodne datoteke. Datoteki sta napisani v formatu Dimacs.
 
 # Primer:
 
-Program lahko zaženemo na primeru sudoku_easy.txt. Zaženemo ga iz ukazne vrstice z naslednjim ukazom:
+Program lahko zaženemo na primeru sudoku_easy.txt. V ukazno vrstico vtipkamo naslednje:
 
   python SATsolver.py sudoku_easy.txt resitev.txt
 
