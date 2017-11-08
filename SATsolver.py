@@ -100,6 +100,7 @@ def dpll(formula, vrednosti):
             weDone = True
 
         elif nova_formula == False:
+            #TODO: while zanka
             if not pomozne:
                 return False, print('ni rešitve')
             
@@ -107,6 +108,7 @@ def dpll(formula, vrednosti):
             if pomozne[zadnji_dodan][3]:
 
                 del pomozne[zadnji_dodan]
+                
 
                 zadnji_dodan = next(reversed(pomozne))
                 vr_zadnjega = not pomozne[zadnji_dodan][0]
@@ -173,18 +175,22 @@ def dpll(formula, vrednosti):
                     
                     return nova_for, nove_vrednosti
                 elif nova_for == False:
-                    nove_vrednosti = nove_vrednosti.update({spr: False})
-                    nova_for1, nove_vrednosti1 = poenostavi(formula, nove_vrednosti)
+                    nove_vrednosti[spr] = False
+                    pomozne[spr] = (False, nova_formula, nove_vrednosti, True)
+                    nova_for1, nove_vrednosti1 = poenostavi(nova_formula, nove_vrednosti)
     
                     if nova_for1 == False:
-                        if not pomozne:
-                            return False, print('ni rešitve')
-                        zadnji_dodan = next(reversed(pomozne))
+                        while pomozne[spr][3]:
+                            del pomozne[spr]
+                            if not pomozne:
+                                return False, print('ni rešitve')
+                            spr = next(reversed(pomozne))
+                        zadnji_dodan = spr
                         vr_zadnjega = not pomozne[zadnji_dodan][0]
                         zadnja_formula = pomozne[zadnji_dodan][1]
                         zadnje_vrednosti = pomozne[zadnji_dodan][2]
                         zadnje_vrednosti[zadnji_dodan] = vr_zadnjega
-                        del pomozne[zadnji_dodan]
+                        pomozne[zadnji_dodan] = (vr_zadnjega, zadnja_formula, zadnje_vrednosti, True)
                         formula, vrednosti = zadnja_formula, zadnje_vrednosti
                         weDone = True
                     elif nova_for1 == True:
