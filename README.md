@@ -8,9 +8,9 @@ Projekt je zapisan v programskem jeziku Python.
 
 Glavna datoteka se nahaja pod imenom SATsolver.py. Zaženemo jo z dvema argumentoma, to sta imeni vhodne in izhodne datoteke. Datoteki sta napisani v formatu Dimacs.
 
-# Primer:
+# Testni primer:
 
-Program lahko zaženemo na primeru sudoku_hard.txt. V ukazno vrstico vtipkamo naslednje:
+Program lahko zaženemo na primeru testni.txt. V ukazno vrstico vtipkamo naslednje:
 
-  python SATsolver.py dimacs/testni.txt resitev.txt
+   python SATsolver.py dimacs/testni.txt resitev.txt
 
