@@ -12,5 +12,5 @@ Glavna datoteka se nahaja pod imenom SATsolver.py. Zaženemo jo z dvema argument
 
 Program lahko zaženemo na primeru sudoku_hard.txt. V ukazno vrstico vtipkamo naslednje:
 
-  python SATsolver.py sudoku_hard.txt resitev.txt
+  python SATsolver.py dimacs/testni.txt resitev.txt
 
